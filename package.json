@@ -1,0 +1,30 @@
+{
+  "name": "snapdiff",
+  "version": "1.0.0",
+  "description": "Visual diff between 2 images. Highlights pixel differences for UI regression testing.",
+  "main": "dist/index.js",
+  "bin": {
+    "snapdiff": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node test/generate-test-images.js && node dist/index.js test/before.png test/after.png -o test/diff.png --json"
+  },
+  "keywords": [
+    "image",
+    "diff",
+    "visual",
+    "regression",
+    "testing",
+    "screenshot"
+  ],
+  "author": "Zakaria Kone",
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.37",
+    "typescript": "^5.9.3"
+  }
+}
